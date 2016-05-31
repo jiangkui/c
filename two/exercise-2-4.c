@@ -67,14 +67,14 @@ int copy(char target[], int targetCount, int targetOffset, char source[], int so
 	int i, copyNum;
 	copyNum = end - sourceOffset;
 	if (copyNum < 1)
-		return 0;
+		return targetOffset;
 
 //	printf("targetOffset:%d\t copyNmu:%d\t sourceOffset:%d\t end:%d\n", targetOffset, copyNum, sourceOffset, end);
 	if (targetCount < targetOffset + copyNum){
-		return 0;
+		return targetOffset;
 	}
 	if (sourceCount < end){
-		return 0;
+		return targetOffset;
 	}
 
 	for (i=targetOffset; i<copyNum + targetOffset; i++){
@@ -92,18 +92,17 @@ void squeeze(char s1[], char s2[], char result[], int resultCount){
 	for (targetCount=0; ((c = s2[targetCount]) && c != EOF && c != '\0'); targetCount++){
 	}
 
-	for (i=0; i<sourceCount; i++){
+	for (i=0; i<sourceCount;){
 //		printf("i:%d", i);
 		index = indexOf(s1, sourceCount, s2, targetCount, i);
 //		printf("index:%d\n", index);
 		if (index == -1){
 			targetOffset = copy(result, resultCount, targetOffset, s1, sourceCount, i, sourceCount);
 			return ;
-		} else {
-			targetOffset = copy(result, resultCount, targetOffset, s1, sourceCount, i, index);
-			i += targetCount;
-		}		
-		i += index-1;
+		}
+		targetOffset = copy(result, resultCount, targetOffset, s1, sourceCount, i, index);
+		i = index;
+		i += targetCount;
 //		printf("i:%d", i);
 	}
 	return ;	
