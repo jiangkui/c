@@ -10,6 +10,8 @@
 #include "1-12.c"
 #include "1-13.c"
 #include "1-14.c"
+#include "1-15.c"
+#include "1-16.c"
 
 int main() {
 //    printf("hello world!\n");
@@ -23,6 +25,9 @@ int main() {
 //    one_ten();
 //    one_twelve();
 //    one_thirteen();
-    one_fourteen();
+//    one_fourteen();
+//    huashiToSheshi(100);
+//    SheshiToHuashi(100);
+    readAndPrintLine();
     return 0;
 }
