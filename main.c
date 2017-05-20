@@ -12,6 +12,8 @@
 #include "1-14.c"
 #include "1-15.c"
 #include "1-16.c"
+#include "1-17.c"
+#include "1-18.c"
 
 int main() {
 //    printf("hello world!\n");
@@ -28,6 +30,8 @@ int main() {
 //    one_fourteen();
 //    huashiToSheshi(100);
 //    SheshiToHuashi(100);
-    readAndPrintLine();
+//    readAndPrintLine();
+//    readAndPrintEightyLine();
+    deleteSpace();
     return 0;
 }

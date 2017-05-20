@@ -40,7 +40,6 @@ int getLines(char line[], int maxLength){
         if (c == EOF || c == '\n') {
             break;
         }
-
         line[i] = c;
     }
 
