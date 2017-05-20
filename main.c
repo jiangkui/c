@@ -14,6 +14,7 @@
 #include "1-16.c"
 #include "1-17.c"
 #include "1-18.c"
+#include "1-19.c"
 
 int main() {
 //    printf("hello world!\n");
@@ -32,6 +33,7 @@ int main() {
 //    SheshiToHuashi(100);
 //    readAndPrintLine();
 //    readAndPrintEightyLine();
-    deleteSpace();
+//    deleteSpace();
+    reverseLine();
     return 0;
 }
