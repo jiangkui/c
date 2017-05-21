@@ -15,6 +15,7 @@
 #include "1-17.c"
 #include "1-18.c"
 #include "1-19.c"
+#include "1-20.c"
 
 int main() {
 //    printf("hello world!\n");
@@ -34,6 +35,7 @@ int main() {
 //    readAndPrintLine();
 //    readAndPrintEightyLine();
 //    deleteSpace();
-    reverseLine();
+//    reverseLine();
+    convertTabToSpace();
     return 0;
 }
