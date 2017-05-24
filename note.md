@@ -6,3 +6,5 @@
 
 >putchar(c) 
 打印一个字符。
+
+[如何修改头文件](https://www.oschina.net/question/179541_26961)
