@@ -19,7 +19,7 @@
 //#include "1-21.c"
 //#include "1-22.c"
 //#include "1-23.c"
-#include "2-1.c"
+#include "../two/2-1.c"
 
 int main() {
 //    printf("hello world!\n");
