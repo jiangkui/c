@@ -3,5 +3,5 @@ project(c)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES two/2-6.c)
+set(SOURCE_FILES two/2-8.c)
 add_executable(c ${SOURCE_FILES})

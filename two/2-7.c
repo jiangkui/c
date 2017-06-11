@@ -6,8 +6,9 @@
  */
 
 #include <stdio.h>
+#include "twoUtil.c"
 
-#define BIT_LENGTH 30
+#define BIT_LENGTH 33
 
 /**
  * 练习 2-7:
@@ -28,23 +29,6 @@
  */
 int invert(int x, int p, int n) {
     return x ^ (~(~0 << n) << (p - n + 1));
-}
-
-/**
- * 十进制转二进制
- */
-void hexToBit(int i, char result[], int length){
-    int bit = 0;
-//    result[length] = '\0';
-    for (int j = length-1; j >= 0; j--) {
-        if (i > 0) {
-            bit = i % 2;
-            i /= 2;
-            result[j] = '0' + bit;
-        } else {
-            result[j] = '0';
-        }
-    }
 }
 
 /**

@@ -6,9 +6,9 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include "twoUtil.c"
 
-# define BIT_LENGTH 30
+# define BIT_LENGTH 33
 
 /**
  * 练习 2-6 :
@@ -24,30 +24,14 @@ int setbits(int x, int p, int n, int y) {
 }
 
 /**
- * 十进制转二进制
- */
-void hexToBit(int i, char result[]){
-    int bit = 0;
-    for (int j = BIT_LENGTH-1; j >= 0; j--) {
-        if (i > 0) {
-            bit = i % 2;
-            i /= 2;
-            result[j] = '0' + bit;
-        } else {
-            result[j] = '0';
-        }
-    }
-}
-
-/**
  * 按照格式输出
  */
 void formatPrint(int x, int p, int n, int y, int result){
     char xBits[BIT_LENGTH], yBits[BIT_LENGTH], resultBits[BIT_LENGTH];
 
-    hexToBit(x, xBits);
-    hexToBit(y, yBits);
-    hexToBit(result, resultBits);
+    hexToBit(x, xBits, BIT_LENGTH);
+    hexToBit(y, yBits, BIT_LENGTH);
+    hexToBit(result, resultBits, BIT_LENGTH);
 
     printf("x:%s, 从第 %d 位开始 %d 个, 替换成 y 最右边的 %d 个\n", xBits, p, n, n);
     printf("y:%s\n", yBits);
