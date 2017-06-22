@@ -211,3 +211,34 @@ int (*comp) (void *, void*); //指向函数的指针
 end 2017年06月15日10:01:56
 
 # 第六章 结构
+
+
+## 6.7 类型定义(typedef)
+```
+typedef int Length;  // 将 Length 定义为与 int 具有同等意义的名字。注意: Length 在变量后面。
+Length len, maxLen;
+Length *lengths[];
+
+typedef struct tnode{
+    char *word;
+    int count;
+    struct tnode *left;
+    struct tnode *right;
+} Treenode;
+定义了一个 Treenode 结构。
+
+```
+
+特性:
+- typedef 没创建新类型, 只是为已存在的类型增加了新的名称。
+- typedef 类似于 #define 语句, 由于 typedef 是有编译器解释的, 因此它的文本替换功能要超过预处理器的能力。
+    - 比如: `typedef int (*PFI)(char *, char *); // 定义了 PFI 是指向函数的指针, 返回值类型是 int`
+
+用途:
+- 使表达方式更简洁
+- 使程序参数化, 提高可移植性, 如果数据类型跟机器有关, 到时候替换 typedef 类型定义即可。
+- 为程序提供更好的说明性, 上面提供的 Treenode 就是一个例子。
+
+## 6.8 联合
+
+知识点: (C语言字节对齐)[https://my.oschina.net/alphajay/blog/3870]
