@@ -242,3 +242,36 @@ typedef struct tnode{
 ## 6.8 联合
 
 知识点: (C语言字节对齐)[https://my.oschina.net/alphajay/blog/3870]
+
+## 6.9 位字段
+在存储空间宝贵的情况下, 如何将多个字段存储到一个机器字里面。 类似 java 中的枚举。
+
+```
+struct {
+    unsigned int is_keyword : 1;
+    unsigned int is_extern : 1;
+    unsigned int is_static : 1;
+} flags;
+
+```
+
+# 第7章 输入与输出
+
+## 7.1 标准输入 / 输出
+
+### 输入重定向
+```
+可以使用符号 < 来实现输入重定向, 如下:
+
+prog < infile
+
+程序将从 infile(而不是从键盘) 中读入字符
+
+同理 > 符号表示将函数结果输出重定向到某个文件中。
+
+```
+
+## 7.2 格式化输出 -- printf 函数
+
+## 7.3 变长参数表
+介绍了 scanf 函数, 功能与 printf 功能相反: 按格式读取字符串, 并将结果写入到 参数里面。
